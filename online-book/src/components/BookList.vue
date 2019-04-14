@@ -1,4 +1,6 @@
 <template>
+  <div>
+  <Navigation/>
   <b-row>
     <b-col cols="12">
       <h2>
@@ -16,14 +18,16 @@
       </ul>
     </b-col>
   </b-row>
+  </div>
 </template>
 
 <script>
-
+  import Navigation from './layout/Navigation'
   import axios from 'axios'
 
   export default {
     name: 'BookList',
+    components: { Navigation },
     data () {
       return {
         fields: {

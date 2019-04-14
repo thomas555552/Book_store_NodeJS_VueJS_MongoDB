@@ -2,52 +2,53 @@
   <b-row>
     <b-col cols="12">
       <h2>
-        Felhasznalo regisztralasa
+        Felhasznalo modositasa
+
       </h2>
       <b-form @submit="onSubmit">
         <b-form-group id="fieldsetHorizontal"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Username">
+                      label="Felhasznalonev">
           <b-form-input id="isbn" :state="state" v-model.trim="user.username"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Password">
+                      label="Jelszo">
           <b-form-input id="title" :state="state" v-model.trim="user.password"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Enter Author">
+                      label="E-mail">
           <b-form-input id="author" :state="state" v-model.trim="user.email"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Enter Publisher Year">
+                      label="Eletkor">
           <b-form-input id="published_year" :state="state" v-model.trim="user.age"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Enter Publisher">
+                      label="Cim">
           <b-form-input id="publisher" :state="state" v-model.trim="user.address"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Enter Publisher">
+                      label="Egyenleg">
           <b-form-input id="publisher" :state="state" v-model.trim="user.balance"></b-form-input>
         </b-form-group>
-        <b-button type="submit" variant="primary">Save</b-button>
+        <b-button type="submit" variant="primary">Modosit</b-button>
       </b-form>
     </b-col>
   </b-row>
@@ -58,19 +59,29 @@
   import axios from 'axios'
 
   export default {
-    name: 'Register',
+    name: 'ModifyUser',
     data () {
       return {
         user: {}
       }
     },
+    created () {
+      axios.get(`http://localhost:3000/user/` + this.$route.params.id)
+        .then(response => {
+          this.user = response.data
+        })
+        .catch(e => {
+          this.errors.push(e)
+        })
+    },
     methods: {
       onSubmit (evt) {
         evt.preventDefault()
-        axios.post(`http://localhost:3000/user/register`, this.user)
+        axios.put(`http://localhost:3000/user/` + this.$route.params.id, this.user)
           .then(response => {
             this.$router.push({
-              name: 'Login',
+              name: 'ModifyUser',
+              params: { id: this.$route.params.id }
             })
           })
           .catch(e => {
@@ -80,6 +91,7 @@
     }
   }
 </script>
+
 <style scoped>
 
 </style>
