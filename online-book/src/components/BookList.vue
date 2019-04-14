@@ -68,11 +68,33 @@
           i++;
         }
 
-        if(this.users[i].balance > book.price)
+
+        if(this.users[i].balance > book.price && book.piece > 0)
         {
+
+          this.users[i].balance = this.users[i].balance - book.price;
+
+          axios.post(`http://localhost:3000/book`, book)
+            .then(response => {
+            })
+            .catch(e => {
+              console.log(e)
+              this.errors.push(e)
+            })
+
+
+          axios.put(`http://localhost:3000/user/` + this.users[i]._id, this.users[i])
+            .then(response => {
+            })
+            .catch(e => {
+              this.errors.push(e)
+            })
+
         this.$router.push({
           name: 'BuyBook',
-          params: { id: book._id, title: book.title, price: book.price, user_name: this.users[i].username }
+          params: { id: book._id, title: book.title, price: book.price,
+            user_name: this.users[i].username, user_balance: this.users[i].balance
+          }
         })
         }
       }

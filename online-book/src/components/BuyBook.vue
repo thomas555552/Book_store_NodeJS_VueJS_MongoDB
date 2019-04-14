@@ -14,6 +14,7 @@
             Konyv Cime: {{book_title }} <br/>
             Konyv Ara: {{book_price}} <br/>
             Felhasznalo neve: {{user_name}} <br/>
+            Felhasznalo jelenlegi egyenlege: {{user_balance}} <br/>
           </b-card-text>
         </b-card>
       </b-card-group>
@@ -33,6 +34,7 @@
           book_title: this.$route.params.title,
           book_price: this.$route.params.price,
           user_name: this.$route.params.user_name,
+          user_balance: this.$route.params.user_balance
         }
       },
       components: {Navigation}

@@ -20,5 +20,24 @@ router.get('/:id', function(req, res, next) {
 });
 
 
+/* BOOK UPDATE DECREASE PIECE TODO */
+router.post('/', function(req, res, next) {
+  Book.findOneAndUpdate(
+    {
+      isbn: req.body.isbn
+    },
+    {$inc: { piece: -1  }}, function (err,book){
+      if(err) throw err;
+      if(!book) {
+        res.status(401).send({success: false, msg: 'HIBA'});
+      } else {
+        res.json({success: true, msg: 'Siker'})
+      }
+    })
+});
+
+
+
+
 
 module.exports = router;
