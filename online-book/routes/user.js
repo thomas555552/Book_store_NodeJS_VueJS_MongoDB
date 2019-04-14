@@ -12,6 +12,14 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
+/* GET ALL USERS */
+router.get('/', function(req, res, next) {
+  User.find(function (err, users) {
+    if (err) return next(err);
+    res.json(users);
+  });
+});
+
 /* REGISTRATION USER */
 router.post('/register', function(req, res, next) {
   User.create(req.body, function (err, post) {

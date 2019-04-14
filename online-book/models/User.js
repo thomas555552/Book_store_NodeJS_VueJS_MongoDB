@@ -13,6 +13,7 @@ var UserSchema = new mongoose.Schema({
   age: Number,
   address: String,
   balance: Number,
+  isLoggedIn: { type: Boolean, default:false},
 });
 
 

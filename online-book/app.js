@@ -12,7 +12,7 @@ var mongoose = require('mongoose');
 
 
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/online_book', { useNewUrlParser: true, promiseLibrary: require('bluebird') })
+mongoose.connect('mongodb://localhost/online_book', { useNewUrlParser: true,useCreateIndex: true , useFindAndModify: false, promiseLibrary: require('bluebird') })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
