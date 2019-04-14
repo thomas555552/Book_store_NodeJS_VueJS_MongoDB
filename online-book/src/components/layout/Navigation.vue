@@ -31,21 +31,20 @@
         modifyUser(){
           axios.get(`http://localhost:3000/user`)
             .then(response => {
-              this.users = response.data
+              this.users = response.data;
             })
             .catch(e => {
               this.errors.push(e)
             })
 
-          var i;
-          while (this.users[i].isLoggedIn===false) {
+          var i=0;
+          while (this.users[i].isLoggedIn ===false) {
             i++;
           }
 
-
           this.$router.push({
             name: 'ModifyUser',
-            params: { id: this.users[2]._id }
+            params: { id: this.users[i]._id }
           })
         }
       }
