@@ -20,7 +20,7 @@ router.get('/:id', function(req, res, next) {
 });
 
 
-/* BOOK UPDATE DECREASE PIECE TODO */
+/* BOOK UPDATE DECREASE PIECE */
 router.post('/', function(req, res, next) {
   Book.findOneAndUpdate(
     {
