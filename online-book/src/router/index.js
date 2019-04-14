@@ -4,7 +4,8 @@ import BookList from '@/components/BookList'
 import Login from '@/components/Login'
 import Register from '@/components/Register'
 import ModifyUser from '@/components/ModifyUser'
-// import Cart from '@/components/Cart'
+import BuyBook from '@/components/BuyBook'
+
 
 Vue.use(Router)
 
@@ -30,7 +31,11 @@ export default new Router({
       name: 'ModifyUser',
       component: ModifyUser
     },
-
+    {
+      path: '/buyBook',
+      name: 'BuyBook',
+      component: BuyBook
+    },
 
   ]
 })

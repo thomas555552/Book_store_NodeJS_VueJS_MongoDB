@@ -8,7 +8,7 @@
       </h2>
       <b-table striped hover :items="books" :fields="fields">
         <template slot="actions" scope="row">
-          <b-btn size="sm" @click.stop="details(row.item)">Details</b-btn>
+          <b-btn size="sm" variant="outline-primary" @click.stop="buyBook(row.item)">Vasarlas</b-btn>
         </template>
       </b-table>
       <ul v-if="errors && errors.length">
@@ -53,10 +53,10 @@
         })
     },
     methods: {
-      details (book) {
+      buyBook (book) {
         this.$router.push({
-          name: 'ShowBook',
-          params: { id: book._id }
+          name: 'BuyBook',
+          params: { id: book._id, title: book.title, price: book.price }
         })
       }
     }
