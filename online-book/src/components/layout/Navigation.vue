@@ -12,14 +12,14 @@
 </template>
 
 <script>
-    import * as user from "mongoose";
+
     import axios from 'axios';
 
     export default {
         name: "Navigation",
       data() {
         return {
-          users: {}
+          users: []
         }
       },
       methods: {
@@ -37,11 +37,16 @@
               this.errors.push(e)
             })
 
-          if(this.users._id === true) {
+          var i;
+          while (this.users[i].isLoggedIn===false) {
+            i++;
+          }
+
+
           this.$router.push({
             name: 'ModifyUser',
-            params: { id: this.users._id }
-          }) }
+            params: { id: this.users[2]._id }
+          })
         }
       }
     }
