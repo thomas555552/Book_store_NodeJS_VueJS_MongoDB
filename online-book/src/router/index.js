@@ -25,11 +25,6 @@ export default new Router({
       name: 'Register',
       component: Register
     },
-   /* {
-      path: '/',
-      name: 'UserList',
-      component: ModifyUser
-    },*/
     {
       path: '/edit-user/:id',
       name: 'ModifyUser',

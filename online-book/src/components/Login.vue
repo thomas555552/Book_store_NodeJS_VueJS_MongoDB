@@ -44,7 +44,6 @@
         evt.preventDefault()
         axios.post(`http://localhost:3000/user/login`, this.user)
           .then(response => {
-
             this.$router.push({
               name: 'BookList'
             })

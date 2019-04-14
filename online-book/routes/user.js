@@ -28,16 +28,38 @@ router.post('/register', function(req, res, next) {
   });
 });
 
-/* LOGIN USER */
+/* LOGIN USER */  /*
 router.post('/login', function(req, res, next) {
   User.findOne({
     username: req.body.username,
-    password: req.body.password
+    password: req.body.password,
   },function (err,user){
     if(err) throw err;
     if(!user) {
       res.status(401).send({success: false, msg: 'Felhasznalo vagy Jelszo hiba'});
-    } else { res.json({success: true, msg: 'Sikeres bejelentkezes'})
+    } else {
+
+
+      res.json({success: true, msg: 'Sikeres bejelentkezes'})
+    }
+  })
+});
+*/
+
+/* LOGIN USER */
+router.post('/login', function(req, res, next) {
+  User.findOneAndUpdate({
+    username: req.body.username,
+    password: req.body.password,
+  },
+    {isLoggedIn: true}, function (err,user){
+    if(err) throw err;
+    if(!user) {
+      res.status(401).send({success: false, msg: 'Felhasznalo vagy Jelszo hiba'});
+    } else {
+
+
+      res.json({success: true, msg: 'Sikeres bejelentkezes'})
     }
   })
 });
