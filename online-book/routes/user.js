@@ -64,6 +64,14 @@ router.post('/login', function(req, res, next) {
   })
 });
 
+/* UPDATE ALL USER WHEN LOGOUT */
+router.put('/', function (req,res,next) {
+  User.updateMany({},{"$set": {isLoggedIn: false}},(err,result)=>{
+    if(err){ throw err}
+    res.send('updated');
+  });
+});
+
 /* UPDATE USER */
 router.put('/:id', function(req, res, next) {
   User.findByIdAndUpdate(req.params.id, req.body, function (err, post) {

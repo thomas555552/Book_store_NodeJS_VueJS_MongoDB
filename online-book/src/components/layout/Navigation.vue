@@ -24,6 +24,10 @@
       },
       methods: {
         logout () {
+          axios.put('http://localhost:3000/user')
+            .catch(e =>{
+              this.errors.push(e);
+            })
           this.$router.push({
             name: 'Login'
           })
