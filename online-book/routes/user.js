@@ -27,7 +27,8 @@ router.post('/login', function(req, res, next) {
     password: req.body.password
   },function (err,user){
     if(err) throw err;
-    if(!user) { res.status(401).send({success: false, msg: 'Felhasznalo nem talalhato'})
+    if(!user) {
+      res.status(401).send({success: false, msg: 'Felhasznalo vagy Jelszo hiba'});
     } else { res.json({success: true, msg: 'Sikeres bejelentkezes'})
     }
   })
