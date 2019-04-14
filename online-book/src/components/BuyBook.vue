@@ -12,7 +12,8 @@
         >
           <b-card-text>
             Konyv Cime: {{book_title }} <br/>
-            Konyv Ara: {{book_price}}
+            Konyv Ara: {{book_price}} <br/>
+            Felhasznalo neve: {{user_name}} <br/>
           </b-card-text>
         </b-card>
       </b-card-group>
@@ -30,7 +31,8 @@
         return {
           book_id: this.$route.params.id,
           book_title: this.$route.params.title,
-          book_price: this.$route.params.price
+          book_price: this.$route.params.price,
+          user_name: this.$route.params.user_name,
         }
       },
       components: {Navigation}

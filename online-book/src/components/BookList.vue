@@ -40,6 +40,7 @@
           actions: { label: 'Action', 'class': 'text-center' }
         },
         books: [],
+        users: [],
         errors: []
       }
     },
@@ -54,10 +55,26 @@
     },
     methods: {
       buyBook (book) {
+        axios.get('http://localhost:3000/user')
+          .then(response =>{
+            this.users = response.data
+          })
+          .catch(e=>{
+            this.errors.push(e)
+          })
+
+        var i=0;
+        while (this.users[i].isLoggedIn ===false) {
+          i++;
+        }
+
+        if(this.users[i].balance > book.price)
+        {
         this.$router.push({
           name: 'BuyBook',
-          params: { id: book._id, title: book.title, price: book.price }
+          params: { id: book._id, title: book.title, price: book.price, user_name: this.users[i].username }
         })
+        }
       }
     }
   }
