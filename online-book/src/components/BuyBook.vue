@@ -10,7 +10,10 @@
           header-text-variant="white"
           align="center"
         >
-          <b-card-text>Lasdasd.</b-card-text>
+          <b-card-text>
+            Konyv Cime: {{book_title }} <br/>
+            Konyv Ara: {{book_price}}
+          </b-card-text>
         </b-card>
       </b-card-group>
     </div>
@@ -23,8 +26,16 @@
 
     export default {
         name: "BuyBook",
+      data () {
+        return {
+          book_id: this.$route.params.id,
+          book_title: this.$route.params.title,
+          book_price: this.$route.params.price
+        }
+      },
       components: {Navigation}
     }
+
 </script>
 
 <style scoped>
