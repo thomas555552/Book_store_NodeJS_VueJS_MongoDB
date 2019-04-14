@@ -12,7 +12,7 @@ var mongoose = require('mongoose');
 
 
 mongoose.Promise = require('bluebird');
-mongoose.connect('mongodb://localhost/mevn-secure', { useNewUrlParser: true, promiseLibrary: require('bluebird') })
+mongoose.connect('mongodb://localhost/online_book', { useNewUrlParser: true, promiseLibrary: require('bluebird') })
   .then(() =>  console.log('connection succesful'))
   .catch((err) => console.error(err));
 
@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({'extended':'false'}));
 app.use(express.static(path.join(__dirname, 'dist')));
 app.use('/books', express.static(path.join(__dirname, 'dist')));
 app.use('/book', book);
-app.use('user', user)
+app.use('/user', user)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

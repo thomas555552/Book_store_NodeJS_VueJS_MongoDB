@@ -15,4 +15,5 @@ var UserSchema = new mongoose.Schema({
   balance: Number,
 });
 
+
 module.exports = mongoose.model('User', UserSchema);
