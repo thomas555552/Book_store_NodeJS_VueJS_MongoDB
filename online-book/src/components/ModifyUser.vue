@@ -49,6 +49,7 @@
           <b-form-input id="publisher" :state="state" v-model.trim="user.balance"></b-form-input>
         </b-form-group>
         <b-button type="submit" variant="primary">Modosit</b-button>
+        <b-button type="button" variant="info" @click.stop="back()">Vissza</b-button>
       </b-form>
     </b-col>
   </b-row>
@@ -87,6 +88,11 @@
           .catch(e => {
             this.errors.push(e)
           })
+      },
+      back(){
+        this.$router.push({
+          name: 'BookList'
+        })
       }
     }
   }
