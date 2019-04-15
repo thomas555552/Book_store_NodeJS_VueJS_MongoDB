@@ -36,7 +36,13 @@ router.post('/', function(req, res, next) {
     })
 });
 
-
+/* NEW BOOK */
+router.post('/add-book', function(req, res, next) {
+  Book.create(req.body, function (err, post) {
+    if (err) return next(err);
+    res.json(post);
+  });
+});
 
 
 

@@ -5,7 +5,7 @@ import Login from '@/components/Login'
 import Register from '@/components/Register'
 import ModifyUser from '@/components/ModifyUser'
 import BuyBook from '@/components/BuyBook'
-
+import CreateBook from '@/components/CreateBook'
 
 Vue.use(Router)
 
@@ -35,6 +35,11 @@ export default new Router({
       path: '/buyBook',
       name: 'BuyBook',
       component: BuyBook
+    },
+    {
+      path: '/add-book',
+      name: 'CreateBook',
+      component: CreateBook
     },
 
   ]
