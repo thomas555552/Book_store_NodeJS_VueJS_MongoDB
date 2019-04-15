@@ -28,23 +28,7 @@ router.post('/register', function(req, res, next) {
   });
 });
 
-/* LOGIN USER */  /*
-router.post('/login', function(req, res, next) {
-  User.findOne({
-    username: req.body.username,
-    password: req.body.password,
-  },function (err,user){
-    if(err) throw err;
-    if(!user) {
-      res.status(401).send({success: false, msg: 'Felhasznalo vagy Jelszo hiba'});
-    } else {
 
-
-      res.json({success: true, msg: 'Sikeres bejelentkezes'})
-    }
-  })
-});
-*/
 
 /* LOGIN USER */
 router.post('/login', function(req, res, next) {
@@ -57,14 +41,12 @@ router.post('/login', function(req, res, next) {
     if(!user) {
       res.status(401).send({success: false, msg: 'Felhasznalo vagy Jelszo hiba'});
     } else {
-
-
       res.json({success: true, msg: 'Sikeres bejelentkezes'})
     }
   })
 });
 
-/* UPDATE ALL USER WHEN LOGOUT */
+/* UPDATE ALL USER WHEN LOGOUT SET isLoggedIn */
 router.put('/', function (req,res,next) {
   User.updateMany({},{"$set": {isLoggedIn: false}},(err,result)=>{
     if(err){ throw err}

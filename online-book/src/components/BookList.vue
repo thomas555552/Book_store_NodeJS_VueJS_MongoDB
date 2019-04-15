@@ -37,7 +37,7 @@
           published_year: { label: 'Kiadasi ev', sortable: true },
           piece: { label: 'Darab'},
           price: {label: 'Ar'},
-          actions: { label: 'Action', 'class': 'text-center' }
+          actions: { label: 'Vasarlas', 'class': 'text-center' }
         },
         books: [],
         users: [],
