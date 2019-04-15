@@ -5,42 +5,42 @@
         Felhasznalo regisztralasa
       </h2>
       <b-form @submit="onSubmit">
-        <b-form-group id="fieldsetHorizontal"
+        <b-form-group id="fieldsetHorizontal1"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
                       label="Username">
           <b-form-input id="username" :state="state" v-model.trim="user.username"></b-form-input>
         </b-form-group>
-        <b-form-group id="fieldsetHorizontal"
+        <b-form-group id="fieldsetHorizontal2"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
                       label="Password">
           <b-form-input id="pw" :state="state" v-model.trim="user.password"></b-form-input>
         </b-form-group>
-        <b-form-group id="fieldsetHorizontal"
+        <b-form-group id="fieldsetHorizontal3"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
                       label="E-mail">
           <b-form-input id="email" :state="state" v-model.trim="user.email"></b-form-input>
         </b-form-group>
-        <b-form-group id="fieldsetHorizontal"
+        <b-form-group id="fieldsetHorizontal4"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
                       label="Eletkor">
           <b-form-input id="age" :state="state" v-model.trim="user.age"></b-form-input>
         </b-form-group>
-        <b-form-group id="fieldsetHorizontal"
+        <b-form-group id="fieldsetHorizontal5"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
                       label="Cim">
           <b-form-input id="address" :state="state" v-model.trim="user.address"></b-form-input>
         </b-form-group>
-        <b-form-group id="fieldsetHorizontal"
+        <b-form-group id="fieldsetHorizontal6"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
