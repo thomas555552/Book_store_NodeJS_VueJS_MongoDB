@@ -1,14 +1,14 @@
-# online-book
+# Book-store
 
-> A Vue.js project
+> Vue.js <br>
+> NodeJS <br>
+> MongoDB <br>
 
+>Text Language: Hungarian
 ## Build Setup
 
-``` bash
-# install dependencies
-npm install
+> install dependencies: <br>
+> <b>npm install </b>
 
-#run
-npm start
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+> run application: <br>
+<b>npm start <b/>
