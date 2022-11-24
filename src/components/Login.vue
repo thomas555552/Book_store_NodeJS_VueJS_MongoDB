@@ -11,14 +11,14 @@
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Felhasznalonev">
+                      label="Usuario">
           <b-form-input id="username" :state="state" v-model.trim="user.username"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Jelszo">
+                      label="Password">
           <b-form-input type="password" id="password" :state="state" v-model.trim="user.password"></b-form-input>
         </b-form-group>
         <b-button type="submit" variant="primary">Acceso</b-button>
