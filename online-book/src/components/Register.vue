@@ -30,21 +30,21 @@
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Eletkor">
+                      label="Edad">
           <b-form-input id="age" :state="state" v-model.trim="user.age"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal5"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Cim">
+                      label="Direccion">
           <b-form-input id="address" :state="state" v-model.trim="user.address"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal6"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Egyenleg">
+                      label="Balance">
           <b-form-input id="balance" :state="state" v-model.trim="user.balance"></b-form-input>
         </b-form-group>
         <b-button type="submit" variant="primary">Guardar</b-button>
