@@ -2,7 +2,7 @@
   <b-row>
     <b-col cols="12">
       <h2>
-        Konyv hozzadasa
+        Agregar libro
 
       </h2>
       <b-form @submit="onSubmit">
@@ -55,7 +55,7 @@
                       label="Darabszam">
           <b-form-input id="piece" :state="state" v-model.trim="book.piece"></b-form-input>
         </b-form-group>
-        <b-button type="submit" variant="primary">Save</b-button>
+        <b-button type="submit" variant="primary">Guardar</b-button>
       </b-form>
     </b-col>
   </b-row>

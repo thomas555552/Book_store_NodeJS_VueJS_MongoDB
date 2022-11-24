@@ -11,10 +11,10 @@
           align="center"
         >
           <b-card-text>
-            Konyv Cime: {{book_title }} <br/>
-            Konyv Ara: {{book_price}} <br/>
-            Felhasznalo neve: {{user_name}} <br/>
-            Felhasznalo jelenlegi egyenlege: {{user_balance}} <br/>
+            Titulo: {{book_title }} <br/>
+            Precio: {{book_price}} <br/>
+            Usuario: {{user_name}} <br/>
+            Saldo Actual: {{user_balance}} <br/>
           </b-card-text>
         </b-card>
       </b-card-group>
