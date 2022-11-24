@@ -17,42 +17,42 @@
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Cim">
+                      label="Titulo">
           <b-form-input id="title" :state="state" v-model.trim="book.title"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal3"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Szerzo">
+                      label="Autor">
           <b-form-input id="author" :state="state" v-model.trim="book.author"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal7"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Leiras">
+                      label="Descripcion">
           <b-form-input id="description" :state="state" v-model.trim="book.description"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal5"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Kiadas eve">
+                      label="Año Publicado">
           <b-form-input id="published_year" :state="state" v-model.trim="book.published_year"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal6"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Ara">
+                      label="Precio">
           <b-form-input id="price" :state="state" v-model.trim="book.price"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal8"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Darabszam">
+                      label="Pieza ID">
           <b-form-input id="piece" :state="state" v-model.trim="book.piece"></b-form-input>
         </b-form-group>
         <b-button type="submit" variant="primary">Guardar</b-button>
