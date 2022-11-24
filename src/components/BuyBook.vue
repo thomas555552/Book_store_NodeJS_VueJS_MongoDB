@@ -5,7 +5,7 @@
       <b-card-group deck>
         <b-card
           border-variant="success"
-          header="Sikeres vasarlas"
+          header="Compra Exitosa"
           header-bg-variant="success"
           header-text-variant="white"
           align="center"
