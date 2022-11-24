@@ -16,5 +16,7 @@
 
 ## Data Persistence with Mongo DB
 
-> Use Docker on Linux Ubuntu, I recomend use WSL if you environment is windows only:
+> Use Docker on Linux Ubuntu, I recomend use WSL if you environment is windows only: <br>
 > <b>docker pull mongo </b>
+
+> <b>docker run --name mongo -p 27017:27017 -d mongo </b>
