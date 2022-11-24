@@ -2,7 +2,7 @@
   <b-row>
     <b-col cols="12">
       <h2>
-        Felhasznalo modositasa
+        Facilidad de uso
 
       </h2>
       <b-form @submit="onSubmit">
@@ -48,8 +48,8 @@
                       label="Egyenleg">
           <b-form-input id="balance" :state="state" v-model.trim="user.balance"></b-form-input>
         </b-form-group>
-        <b-button type="submit" variant="primary">Modosit</b-button>
-        <b-button type="button" variant="info" @click.stop="back()">Vissza</b-button>
+        <b-button type="submit" variant="primary">De moda</b-button>
+        <b-button type="button" variant="info" @click.stop="back()">Atras</b-button>
       </b-form>
     </b-col>
   </b-row>
