@@ -6,7 +6,7 @@ var BookSchema = new mongoose.Schema({
   description: String,
   published_year: String,
   price: Number,
-  piece: Number,
+  piece: Number
 });
 
 module.exports = mongoose.model('Book', BookSchema);
