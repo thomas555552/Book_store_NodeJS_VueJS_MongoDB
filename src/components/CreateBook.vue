@@ -63,30 +63,28 @@
 </template>
 
 <script>
+import axios from 'axios'
 
-  import axios from 'axios'
-
-  export default {
-    name: 'CreateBook',
-    data () {
-      return {
-        book: {}
-      }
-    },
-    methods: {
-      onSubmit (evt) {
-        evt.preventDefault()
-        axios.post(`http://localhost:3000/book/add-book`, this.book)
-          .then(response => {
-            this.$router.push({
-              name: 'Login'
-
-            })
+export default {
+  name: 'CreateBook',
+  data () {
+    return {
+      book: {}
+    }
+  },
+  methods: {
+    onSubmit (evt) {
+      evt.preventDefault()
+      axios.post(`http://localhost:3000/book/add-book`, this.book)
+        .then(response => {
+          this.$router.push({
+            name: 'Login'
           })
-          .catch(e => {
-            this.errors.push(e)
-          })
-      }
+        })
+        .catch(e => {
+          this.errors.push(e)
+        })
     }
   }
+}
 </script>

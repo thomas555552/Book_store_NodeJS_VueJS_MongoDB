@@ -56,30 +56,30 @@
 
 <script>
 
-  import axios from 'axios'
+import axios from 'axios'
 
-  export default {
-    name: 'Register',
-    data () {
-      return {
-        user: {}
-      }
-    },
-    methods: {
-      onSubmit (evt) {
-        evt.preventDefault()
-        axios.post(`http://localhost:3000/user/register`, this.user)
-          .then(response => {
-            this.$router.push({
-              name: 'Login',
-            })
+export default {
+  name: 'Register',
+  data () {
+    return {
+      user: {}
+    }
+  },
+  methods: {
+    onSubmit (evt) {
+      evt.preventDefault()
+      axios.post(`http://localhost:3000/user/register`, this.user)
+        .then(response => {
+          this.$router.push({
+            name: 'Login'
           })
-          .catch(e => {
-            this.errors.push(e)
-          })
-      }
+        })
+        .catch(e => {
+          this.errors.push(e)
+        })
     }
   }
+}
 </script>
 <style scoped>
 
