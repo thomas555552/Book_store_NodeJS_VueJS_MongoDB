@@ -2,7 +2,7 @@
   <b-row>
     <b-col cols="12">
       <h2>
-        Felhasznalo modositasa
+        Actualizacion de Usuario
 
       </h2>
       <b-form @submit="onSubmit">
@@ -10,14 +10,14 @@
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Felhasznalonev">
+                      label="Usuario">
           <b-form-input id="username" :state="state" v-model.trim="user.username"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal2"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Jelszo">
+                      label="Password">
           <b-form-input id="pw" :state="state" v-model.trim="user.password"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal3"
@@ -31,25 +31,25 @@
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Eletkor">
+                      label="Edad">
           <b-form-input id="age" :state="state" v-model.trim="user.age"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal4"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Cim">
+                      label="Direccion">
           <b-form-input id="address" :state="state" v-model.trim="user.address"></b-form-input>
         </b-form-group>
         <b-form-group id="fieldsetHorizontal5"
                       horizontal
                       :label-cols="4"
                       breakpoint="md"
-                      label="Egyenleg">
+                      label="Balance">
           <b-form-input id="balance" :state="state" v-model.trim="user.balance"></b-form-input>
         </b-form-group>
-        <b-button type="submit" variant="primary">Modosit</b-button>
-        <b-button type="button" variant="info" @click.stop="back()">Vissza</b-button>
+        <b-button type="submit" variant="primary">Guardar</b-button>
+        <b-button type="button" variant="info" @click.stop="back()">Atras</b-button>
       </b-form>
     </b-col>
   </b-row>

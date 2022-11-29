@@ -4,11 +4,11 @@
   <b-row>
     <b-col cols="12">
       <h2>
-        Könyv Lista
+        Lista de libros
       </h2>
       <b-table striped hover :items="books" :fields="fields">
         <template slot="actions" scope="row">
-          <b-btn size="sm" variant="outline-primary" @click.stop="buyBook(row.item)">Vasarlas</b-btn>
+          <b-btn size="sm" variant="outline-primary" @click.stop="buyBook(row.item)">Comprar</b-btn>
         </template>
       </b-table>
       <ul v-if="errors && errors.length">
@@ -32,12 +32,12 @@
       return {
         fields: {
           isbn: { label: 'ISBN', sortable: true, 'class': 'text-center' },
-          title: { label: 'Cim', sortable: true },
-          author: { label: 'Szerzo', sortable: true },
-          published_year: { label: 'Kiadasi ev', sortable: true },
-          piece: { label: 'Darab'},
-          price: {label: 'Ar'},
-          actions: { label: 'Vasarlas', 'class': 'text-center' }
+          title: { label: 'Titulo', sortable: true },
+          author: { label: 'Autor', sortable: true },
+          published_year: { label: 'Publicado', sortable: true },
+          piece: { label: 'Pieza'},
+          price: {label: 'Precio'},
+          actions: { label: 'Comprar', 'class': 'text-center' }
         },
         books: [],
         users: [],

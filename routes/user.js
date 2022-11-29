@@ -39,9 +39,9 @@ router.post('/login', function(req, res, next) {
     {isLoggedIn: true}, function (err,user){
     if(err) throw err;
     if(!user) {
-      res.status(401).send({success: false, msg: 'Felhasznalo vagy Jelszo hiba'});
+      res.status(401).send({success: false, msg: 'Error de nombre de usuario o contraseña'});
     } else {
-      res.json({success: true, msg: 'Sikeres bejelentkezes'})
+      res.json({success: true, msg: 'Has iniciado sesión correctamente'})
     }
   })
 });

@@ -13,8 +13,7 @@ var UserSchema = new mongoose.Schema({
   age: Number,
   address: String,
   balance: Number,
-  isLoggedIn: { type: Boolean, default:false},
+  isLoggedIn: { type: Boolean, default: false }
 });
-
 
 module.exports = mongoose.model('User', UserSchema);
